@@ -14,3 +14,44 @@ RIGHT(); //->  Sets the motors to go right while spinning the left motors in the
 STOP(); //-> Full stop for all motors.
 PRINTDATA(); //-> Prints valuable data like the yAxis, xAxis, direction, and updates the LED Matrix on the R4.
 ```
+To put everything togheter in the main loop, I assign the yAxis and xAxis to analog read from the xAxis in and yAxis and setup if statments to direct the motors. 
+
+```C
+  if (yAxis < 470) //Move backwards
+  {
+    MotorSpeed = map(yAxis, 470, 0, 0, 255);
+    analogWrite(LED_IN, MotorSpeed);
+    backward();
+    printData(1);
+  }
+
+
+  else if (yAxis > 550) //Move forward
+  {
+    MotorSpeed = map(yAxis, 550, 1023, 0, 255);
+    forward();
+    printData(2);
+  
+  }
+
+  else if (xAxis < 470) //Move left
+  { 
+    MotorSpeed = map(xAxis, 470, 0, 0, 255);
+    left(); 
+    printData(3);
+  }
+
+  else if (xAxis > 550) //Move right
+  {
+    MotorSpeed = map(xAxis, 550, 1023, 0, 255);
+    right();
+    printData(4);
+  }
+    else {
+    analogWrite(LED_IN, 0);
+    MotorSpeed = 0;
+    stop(); 
+  }
+  analogWrite(pwmM, MotorSpeed);
+}
+```
