@@ -7,10 +7,10 @@ I have tried my best to organize the code through comments and regions for bette
 ## Talking a bit about the code
 Getting into the finer details, after defining all my pins I set up six total functions: 
 ```C
-FORWARD(); -> Sets the motors to go in a forwards direction
-BACKWARD(); -> Sets the motors to go in a backward direction
-LEFT(); -> Sets the motors to go left while spinning the right motors in the opposite direction for a smooth turn
-RIGHT(); ->  Sets the motors to go right while spinning the left motors in the opposite direction for a smooth turn
-STOP(); -> Full stop for all motors.
-PRINTDATA(); -> Prints valuable data like the yAxis, xAxis, direction, and updates the LED Matrix on the R4.
+FORWARD(); //-> Sets the motors to go in a forwards direction
+BACKWARD(); //-> Sets the motors to go in a backward direction
+LEFT(); //-> Sets the motors to go left while spinning the right motors in the opposite direction for a smooth turn
+RIGHT(); //->  Sets the motors to go right while spinning the left motors in the opposite direction for a smooth turn
+STOP(); //-> Full stop for all motors.
+PRINTDATA(); //-> Prints valuable data like the yAxis, xAxis, direction, and updates the LED Matrix on the R4.
 ```
