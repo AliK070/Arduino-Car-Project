@@ -56,3 +56,9 @@ To put everything togheter in the main loop, I assign the yAxis and xAxis to ana
 }
 ```
 There is also an LED I forgot to mention, these are just the back lights of the car, anytime you push the joystick backwards they would light up depending on the amount of force you excert on the joystick. 
+
+## The Schematic
+
+This is a very messy schematic but you are still able to see where the components are layed out: 
+
+![CAR_SCHEM_SCHEM](https://github.com/user-attachments/assets/474cd4cc-8cdd-4de2-bf26-74f114be358f)
